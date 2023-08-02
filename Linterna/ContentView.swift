@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var lamp = false
+    @State var face = false
     var body: some View {
         VStack{
             ZStack{
@@ -18,6 +19,15 @@ struct ContentView: View {
                     lamp.toggle()
                 }){
                     Text("encender")
+                }
+            }
+            ZStack{
+                
+                Button(action:  {
+                    face.toggle()
+                }){
+                    Text(face ? "😇" : "😈")
+                        .font(.system(size: 200))
                 }
             }
             
